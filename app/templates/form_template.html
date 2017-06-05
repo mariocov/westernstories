@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}A Western Story - Login{% endblock %}
+
+{% block content_page %}
+  <div class="container container-story">
+    <div class="col-md-8 col-md-offset-1 title">
+      <h1>A Western Story - {{title}}</h1>
+    </div>
+    <div class="col-md-6 col-md-offset-3 story">
+      {{ wtf.quick_form(form) }}
+    </div>
+  </div>
+
+{% endblock %}

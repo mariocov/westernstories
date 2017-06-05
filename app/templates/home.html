@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}A western Stories{% endblock %}
+
+{% block metas %}
+{{super()}}
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <!-- Facebook meta -->
+  <meta property="og:locale" content="it_IT" />
+  <meta property="og:url" content="{{url_for('main.home', _external=True)}}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="A Western Stories" />
+  <meta property="og:site_name" content="A Western Stories" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="A Western Stories" />
+{% endblock %}
+
+
+{% block content_page %}
+  <div class="container container-story">
+    <div class="col-md-6 col-md-offset-1 title">
+      <h1>A Western Story</h1>
+    </div>
+    <div class="col-md-8 col-md-offset-2 story">
+      <p>{{story.post}}</p>
+      <div class="loader"></div>
+      <button type="button" class="btn btn-default" name="button">Leggi una nuova storia</button>
+    </div>
+  </div>
+
+{% endblock %}

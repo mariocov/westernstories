@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+
+{% block content_page %}
+  <div class="container container-story">
+    <div class="col-md-6 col-md-offset-1 title">
+      <h1>A Western Story - {{title}}</h1>
+    </div>
+    <div class="col-md-8 col-md-offset-2 story">
+        <table class="table">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Elimina</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      {% for story in stories %}
+      <tr>
+        <td><a href="{{url_for('stories.edit_story',story_id=story._id)}}">{{story.title}}</a></td>
+        <td>
+          <form action="{{url_for('stories.delete_story', story_id=story._id)}}" method="POST">
+              <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+              <button class="btn btn-warning" name="story_id">X</button>
+          </form>
+        </td>
+      </tr>
+       {% endfor %}
+    </tbody>
+
+  </table>
+
+    </div>
+  </div>
+
+{% endblock %}

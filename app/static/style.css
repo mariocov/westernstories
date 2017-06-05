@@ -1,0 +1,67 @@
+textarea {
+  height: 250px !important;
+}
+
+.table th:first-of-type {
+  width: 130%;
+}
+
+.navbar {
+  background-color: white;
+  border-bottom: 1px solid grey;
+}
+
+.navbar a {
+  color: black;
+}
+
+.navbar-toggle {
+  background-color: darkgrey;
+}
+
+.navbar-toggle span {
+    background-color: black;
+}
+
+.story {
+  font-size:20px
+}
+
+.title {
+  font-family: 'Holtwood One SC', serif;
+  font-weight: 800;
+  margin-bottom:30px;
+}
+
+.container-story {
+  margin-top:15vh;
+}
+
+button {
+  margin-top: 20px;
+}
+
+.loader {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border: 10px solid #f3f3f3;
+  border-top: 10px solid #ffeb3b;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media screen and (max-width: 480px) {
+  .container-story {
+    margin-top:5vh;
+  }
+  .story {
+    font-size:16px
+  }
+}
